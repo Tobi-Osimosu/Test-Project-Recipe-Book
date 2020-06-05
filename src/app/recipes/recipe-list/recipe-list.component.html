@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-9 col-12">
+        <div class="col-md-4 col-2">
+            <button (click)="onNewRecipe()" class="btn btn-success">New Recipe</button>
+        </div>
+        <div class="col-md-5 col-2">
+            <button (click)="onFetchData()" class="btn btn-primary">Fetch Recipes</button>
+        </div>
+        <div class="col-md-3 col-2">
+            <button (click)="onSaveData()" class="btn btn-success">Upload Recipes</button>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12 col-12">
+        <app-recipe-item *ngFor="let recipeEl of recipes; let i = index" @slideInOut [recipe]="recipeEl" [id]="i">
+        </app-recipe-item>
+    </div>
+</div>
+<br>
